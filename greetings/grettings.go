@@ -11,6 +11,11 @@ func Hello(name string) (string, error) {
 		return "", errors.New("EMPTY_NAME")
 	}
 	message := fmt.Sprintf(randomFormat(), name)
+	//// for failing test scenario use these
+	// if name == "" {
+	// 	return name, errors.New("EMPTY_NAME")
+	// }
+	// message := fmt.Sprint(randomFormat())
 	return message, nil
 }
 
